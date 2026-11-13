@@ -5,47 +5,47 @@ import random
 # Edit this to change the map; every row must be the same length and the
 # outer border should stay solid wall.
 LAYOUT = [
-    "###################################################",
-    "#   #           #       #                       ###",
-    "#   #           #       #                       ###",
-    "#   #           #                               ###",
-    "#   #   #   #   #   #         ###########   #   ###",
-    "#       #           #               #       #   ###",
-    "#       #           #               #       #   ###",
-    "#       #           #               #       #   ###",
-    "#   #   #         ###         #######   #####   ###",
-    "#   #   #           #               #   #       ###",
-    "#   #   #   #                       #   #       ###",
-    "#   #   #   #                       #   #       ###",
-    "#   #   #####   #               #   #   #   #######",
-    "#   #           #                   #           ###",
-    "#   #           #                   #           ###",
-    "#   #           #                   #           ###",
-    "#      ##   #############       #####   #   #   ###",
-    "#           #           #       #               ###",
-    "#           #           #       #               ###",
-    "#           #           #       #               ###",
-    "#       #####   #   #   #   #   #############   ###",
-    "#                   #                           ###",
-    "#   #               #                           ###",
-    "#   #               #                           ###",
-    "###################################################",
+    "#####################################################",
+    "###               #       #                       ###",
+    "###               #       #                       ###",
+    "###   #           #                               ###",
+    "###   #   #   #   #   #         ###########   #   ###",
+    "###   #   #           #               #       #   ###",
+    "###       #           #               #       #   ###",
+    "###       #           #               #       #   ###",
+    "###   #   #         ###         #######   #####   ###",
+    "###   #   #           #               #   #       ###",
+    "###   #   #   #                       #   #       ###",
+    "###   #   #   #                       #   #       ###",
+    "###   #   #####   #                       #   #######",
+    "###   #           #                   #           ###",
+    "###   #           #                   #           ###",
+    "###   #           #                   #           ###",
+    "###      ##   #############       #####           ###",
+    "###           #           #       #               ###",
+    "###           #           #       #               ###",
+    "###           #           #       #               ###",
+    "###       #####       #   #       #############   ###",
+    "###                   #                           ###",
+    "###      #            #                           ###",
+    "###      #            #                           ###",
+    "#####################################################",
 ]
 
 
 class Maze:
 #def __init__(self, width: int | None = None, height: int | None = None,seed: int | None = None, layout: list[str] = LAYOUT):
-    def __init__():
+    def __init__(self):
         layout=LAYOUT
         # width/height are ignored; the size comes from the layout.
         # They're kept so existing calls like Maze(51, 25, seed) still work.
        #  if len({len(row) for row in layout}) != 1:
         #    raise ValueError("All layout rows must be the same length")
-        #self.height = len(layout)
-        #self.width = len(layout[0])
+        self.height = len(layout)
+        self.width = len(layout[0])
         # The RNG is still used for random_floor (spawn points).
-        #self.rng = random.Random(seed)
-        #self.grid = [list(row) for row in layout]
+        self.rng = random.Random("12")
+        self.grid = [list(row) for row in layout]
 
     def walkable(self, x: int, y: int) -> bool:
         return 0 <= x < self.width and 0 <= y < self.height and self.grid[y][x] == " "

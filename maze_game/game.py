@@ -57,7 +57,9 @@ class Game:
         seed: int | None = None,
     ) -> None:
         self.lock = threading.RLock()
-        self.maze = Maze(width, height, seed)
+        
+        #self.maze = Maze(width, height, seed)
+        self.maze = Maze()
 
         self.players: dict[int, Player] = {}
         self.projectiles: dict[int, Projectile] = {}
