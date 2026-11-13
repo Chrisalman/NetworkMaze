@@ -1,0 +1,1 @@
+"""Multiplayer terminal maze package."""

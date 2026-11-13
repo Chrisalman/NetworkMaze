@@ -1,0 +1,9 @@
+[project]
+name = "terminal-maze-multiplayer"
+version = "1.0.0"
+description = "A multiplayer terminal maze combat game"
+requires-python = ">=3.10"
+
+[project.scripts]
+maze-server = "maze_game.server_app:main"
+maze-client = "maze_game.client_app:main"
