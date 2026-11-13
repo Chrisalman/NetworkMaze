@@ -1,0 +1,11 @@
+ Volume in drive C is Windows
+ Volume Serial Number is FE82-0C08
+
+ Directory of C:\Users\alman\Python\m\NetworkMaze
+
+13/11/2026  20:24    <DIR>          .
+13/11/2026  20:23    <DIR>          ..
+13/11/2026  20:23                28 README.md
+13/11/2026  20:24                 0 trset.txt
+               2 File(s)             28 bytes
+               2 Dir(s)  13,669,965,824 bytes free
